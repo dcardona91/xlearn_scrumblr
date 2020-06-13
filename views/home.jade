@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+	head
+		<!-- SCRIPTS -->
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<!-- FONTS -->
+		//<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+		//<link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		title scrumblr
+
+body
+
+	image#header-logo(src='/images/header-logo.png')
+
+	div#navegador.col-md-1
+		p icono1
+		p icono2
+		p icono3
+
+	div.col-md-11
+
+		div.col-md-6
+			image#img-tablero-inicio(src='/images/tablero-draggable.png')
+			h5.text-center Instruciones de tablero colaborativo
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore autem ipsam at maiores a nesciunt nulla asperiores non fugit quos nisi aperiam fugiat nemo perferendis veritatis voluptates, eos, tempora eius.
+
+		div#init-content.board-outline.col-md-6
+			div#board.content-board
+				div#board-doodles.content-background
+
+
+				table#board-table.board-table.content-backgroun-interno
+					tr
+						td
+							//h1.home Tablero 10xConsultores
+							form#ingreso-tablero.home(onsubmit="return go();")
+								//label Ingrese Nombre del Tablero
+								//br
+								input.text(type="text", name="name")
+								a#go(onclick="return go();") &nbsp;Ir al tablero
+							//<br><br>
+							//p.home Tableros Disponibles:
+							//p.home!= '<a href="http://' + locals.url + '/demo">' + locals.url + '/demo</a>'
+							//<br><br><br>
+							//p.home.small sourcecode at <a href="https://github.com/aliasaria/scrumblr">github</a>
+
+							//p.home.small Innovación: <a href="http://127.0.0.1:8080/innovacion">Click para ingresar al tablero</a>
+							//p.home.small Tecnologia: <a href="http://127.0.0.1:8080/tecnologia">Click para ingresar al tablero</a>
+
+							//display # of active users here
+							<br>
+							p.title-participantes Participantes:
+							div.active-connections= "connections: " + connected
+
+		//div.stickers
+			div.sticker#sticker-red
+			div.sticker#sticker-blue
+			div.sticker#sticker-yellow
+			div.sticker#sticker-green
+			br
+			div.sticker#sticker-pink
+			div.sticker#sticker-lightblue
+			div.sticker#sticker-orange
+			div.sticker#sticker-purple
+			br
+			div.sticker#sticker-gold
+			div.sticker#sticker-bluestar
+			div.sticker#sticker-silverstar
+			div.sticker#sticker-redstar
+
+
+		//<div style="width: 980px; height: 450px; border: solid 2px; opacity:.1; margin-top: 100px"> this will be the backlog that only appears on drag or perhaps not at all</div>
+
+		<script type="text/javascript">function go() {var value = document.forms[0].elements["name"].value; value = escape(value); window.location.href = value; return false;}</script>
+
+		<script type="text/javascript">	  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-2069672-4']);  _gaq.push(['_trackPageview']);   (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })(); </script>
